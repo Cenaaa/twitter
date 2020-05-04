@@ -10,7 +10,7 @@ const rateLimit = require("express-rate-limit");
 
 const app = express();
 const db = monk(process.env.MONGO_URI || 'localhost/mytwitter');
-const comments = db.get('perCom');
+const comments = db.get('comments');
 const filter = new Filter();
 
 app.use(cors());
